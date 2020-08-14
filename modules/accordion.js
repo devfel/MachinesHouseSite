@@ -1,21 +1,29 @@
-// 0310 Criando Accordion List, como se fosse um FAQ, no sobre.
-export default function initAccordion() {
-  const accordionListTitles = document.querySelectorAll(
-    `[data-anime="accordion"] dt`
-  );
+// --- Parameters ---
+// list: used to select the list to be changed. ie: `[data="acc"] dt`
+// default list: none, can't be empty
 
-  function activeAccordion() {
-    this.classList.toggle(`ativo`);
-    this.nextElementSibling.classList.toggle(`ativo`);
-    // Pode ser event.currentTarget no lugar do this, se passar o event de parametro nesta funcao.
+export default class Accordion {
+  constructor(list) {
+    this.accordionList = document.querySelectorAll(list);
+    this.activeClass = "active";
   }
 
-  if (accordionListTitles.length) {
-    accordionListTitles[0].classList.add(`ativo`);
-    accordionListTitles[0].nextElementSibling.classList.add(`ativo`);
+  toggleAccordion(element) {
+    element.classList.toggle(this.activeClass);
+    element.nextElementSibling.classList.toggle(this.activeClass);
+  }
 
-    accordionListTitles.forEach((element) => {
-      element.addEventListener(`click`, activeAccordion);
+  addAccordionEvent() {
+    this.accordionList.forEach((element) => {
+      element.addEventListener(`click`, () => this.toggleAccordion(element));
     });
+  }
+
+  init() {
+    if (this.accordionList.length) {
+      // Always activate first element of the list.
+      this.toggleAccordion(this.accordionList[0]);
+      this.addAccordionEvent();
+    }
   }
 }
