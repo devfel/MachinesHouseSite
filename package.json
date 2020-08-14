@@ -1,8 +1,8 @@
 {
-  "name": "blog-casa-das-maquinas",
+  "name": "machines-house-site",
   "version": "1.0.0",
   "description": "",
-  "main": "main.html",
+  "main": "index.html",
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack --mode development --watch"
