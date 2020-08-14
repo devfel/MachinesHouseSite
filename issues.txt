@@ -1,4 +1,5 @@
 Change Colors.
+Set up text and grid so the text go bellow image. 
 Fix Issue with resizing small -> large.
 Fix Issue with initial load where everything loads.
 Fix Issue where the text size glitch the loaded elem.
