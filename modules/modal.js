@@ -1,27 +1,50 @@
-export default function initModal() {
-  const botaoAbrir = document.querySelector('[data-modal="abrir"]');
-  const botaoFechar = document.querySelector('[data-modal="fechar"]');
-  const containerModal = document.querySelector('[data-modal="container"]');
+// Function to open or close a Modal Box on the Website
 
-  function abrirModal(event) {
-    event.preventDefault();
-    containerModal.classList.toggle(`ativo`);
+// --- Parameters ---
+// buttonOpen: button to open Modal. ie: '[data-modal="open"]',
+// default: none, can't be empty
+// buttonClose: button to close Modal. ie: '[data-modal="close"]',
+// default: none, can't be empty
+// containerModal: container to be shown or hidden. ie: '[data-modal="content"]',
+// default: none, can't be empty
+
+export default class Modal {
+  constructor(buttonOpen, buttonClose, containerModal) {
+    this.buttonOpen = document.querySelector(buttonOpen);
+    this.buttonClose = document.querySelector(buttonClose);
+    this.containerModal = document.querySelector(containerModal);
+
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+    this.clickOutsideModal = this.clickOutsideModal.bind(this);
   }
 
-  function fecharModal(event) {
+  openModal(event) {
     event.preventDefault();
-    containerModal.classList.toggle(`ativo`);
+    this.containerModal.classList.toggle(`active`);
   }
 
-  function cliqueForaModal(event) {
-    if (event.target === this) {
-      fecharModal(event);
+  closeModal(event) {
+    event.preventDefault();
+    this.containerModal.classList.toggle(`active`);
+  }
+
+  clickOutsideModal(event) {
+    if (event.target === this.containerModal) {
+      this.closeModal(event);
     }
   }
 
-  if (botaoAbrir && botaoFechar && containerModal) {
-    botaoAbrir.addEventListener("click", abrirModal);
-    botaoFechar.addEventListener("click", fecharModal);
-    containerModal.addEventListener("click", cliqueForaModal);
+  addModalEvent() {
+    this.buttonOpen.addEventListener("click", this.openModal);
+    this.buttonClose.addEventListener("click", this.closeModal);
+    this.containerModal.addEventListener("click", this.clickOutsideModal);
+  }
+
+  init() {
+    if (this.buttonOpen && this.buttonClose && this.containerModal) {
+      this.addModalEvent();
+    }
+    return this;
   }
 }

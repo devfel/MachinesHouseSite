@@ -36,5 +36,6 @@ export default class TabNav {
       this.activeTab(0); // activate first tab;
       this.addTabNavEvent();
     }
+    return this;
   }
 }
