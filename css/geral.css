@@ -339,20 +339,20 @@ body {
   }
 }
 
-.js [data-anime="accordion"] dd {
+.js [data-animate="accordion"] dd {
   display: none;
 }
 
-[data-anime="accordion"] dt:after {
+[data-animate="accordion"] dt:after {
   content: "↪";
   margin-left: 10px;
 }
 
-[data-anime="accordion"] dt.ativo:after {
+[data-animate="accordion"] dt.active:after {
   content: "↩";
 }
 
-[data-anime="accordion"] dd.ativo {
+[data-animate="accordion"] dd.active {
   display: block;
   animation: slideDown 0.5s forwards;
 }
