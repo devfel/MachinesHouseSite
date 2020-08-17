@@ -3,7 +3,7 @@ import Accordion from "./modules/accordion.js";
 import TabNav from "./modules/tab-nav.js";
 import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
-import initDropdownMenu from "./modules/dropdown-menu.js";
+import DropdownMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initFuncionamento from "./modules/horario-func.js";
 import feathStores from "./modules/fetch-stores.js";
@@ -23,9 +23,9 @@ const tabNav = new TabNav(
 tabNav.init();
 
 const modal = new Modal(
-  '[data-modal="abrir"]',
-  '[data-modal="fechar"]',
-  '[data-modal="container"]'
+  `[data-modal="abrir"]`,
+  `[data-modal="fechar"]`,
+  `[data-modal="container"]`
 );
 modal.init();
 
@@ -35,9 +35,11 @@ tooltip.init();
 const animaScroll = new AnimaScroll(`[data-anime="scroll"]`);
 animaScroll.init();
 
-feathStores("./storesapi.json", ".numbers-grid");
-fetchBitcoin("https://blockchain.info/ticker", ".btc-preco");
+const dropdownMenu = new DropdownMenu(`[data-dropdown]`);
+dropdownMenu.init();
 
-initDropdownMenu();
+feathStores(`./storesapi.json`, `.numbers-grid`);
+fetchBitcoin(`https://blockchain.info/ticker`, `.btc-preco`);
+
 initMenuMobile();
 initFuncionamento();
