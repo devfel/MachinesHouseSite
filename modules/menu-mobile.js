@@ -1,13 +1,14 @@
-// Function to open or close a submenu (aka: dropdown menu).
+// Function to open or close a mobile manu (aka: hamburger menu).
 
 // --- Parameters ---
-// dropdownMenus: class selector. ie: `[data-dropdown]`,
+// menuButton: class selector. ie: `[data-menu="button"]`,
+// default: none, can't be empty
+// menuList: class selector. ie: `[data-menu="list"]`,
 // default: none, can't be empty
 // events: events that will trigger the menu. ie: ["click"],
 // default: ["touchstart", "click"]
 // activeClass: not a parameter, but configurable,
 // class name to be added when the menu is active.
-//const menuMobile = new MenuMobile(`[data-menu="button"]`, `[data-menu="list"]`);
 
 import outsideClick from "./outsideclick.js";
 
