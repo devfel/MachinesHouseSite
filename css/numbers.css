@@ -24,7 +24,7 @@
   color: #e54;
 }
 
-[data-semana]::after {
+[data-week]::after {
   display: inline-block;
   content: "";
   width: 9px;
@@ -35,6 +35,6 @@
   border: 1px solid #000;
 }
 
-[data-semana].aberto::after {
+[data-week].open::after {
   background: #3f4;
 }
