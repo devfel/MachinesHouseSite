@@ -9,6 +9,7 @@ import BusinessHours from "./modules/business-hours.js";
 import feathStores from "./modules/fetch-stores.js";
 import fetchBitcoin from "./modules/fetch-bitcoin.js";
 import AnimaScroll from "./modules/anima-scroll.js";
+import SlideNav from "./modules/slide.js";
 
 const smoothScroll = new SmoothScroll(`[data-menu="suave"] a[href^="#"]`);
 smoothScroll.init();
@@ -46,3 +47,7 @@ businessHours.init();
 
 feathStores(`./storesapi.json`, `.numbers-grid`);
 fetchBitcoin(`https://blockchain.info/ticker`, `.btc-preco`);
+
+const slide = new SlideNav(".slide", ".wrapper");
+slide.init();
+slide.addControl(".custom-controls");
