@@ -1,6 +1,7 @@
 // Function to open or close a submenu (aka: dropdown menu).
 // Only necessary if you need the submenu to stay open with click.
-// Has a know bug where resized mobile submenu becomes unclickable (>780 to <780).
+// Has a know bug where resized mobile submenu becomes unclickable
+// Only happens if it goes from >780px to <780px window width.
 
 // --- Parameters ---
 // dropdownMenus: class selector. ie: `[data-dropdown]`,
@@ -9,10 +10,6 @@
 // default: ["touchstart", "click"]
 // activeClass: not a parameter, but configurable,
 // class name to be added when the menu is active.
-
-// ONLY NECESSARY IF YOU NEED TO CLICK AN OPTION TO OPEN SUBMENU
-// Removed cause it has a bug with mobile touch on links
-// ---- Commands to load above, add them to modules ----
 
 import outsideClick from "./outsideclick.js";
 

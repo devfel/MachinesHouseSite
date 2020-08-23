@@ -19,7 +19,7 @@
   background: white;
   min-width: 300px;
   padding: 40px;
-  border: 10px solid #ffc56e;
+  border: 10px solid #333e5b;
   box-shadow: 0 0 0 10px white;
   position: relative;
 }
@@ -78,7 +78,7 @@
 
 .modal button[type="submit"] {
   display: block;
-  background: #f63c41;
+  background: #333e5b;
   border: none;
   border-radius: 4px;
   padding: 0.7rem 2rem;
