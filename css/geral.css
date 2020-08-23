@@ -116,7 +116,7 @@ body {
   width: 40px;
   height: 10px;
   margin-right: 10px;
-  background: #f63c41;
+  background: #b32340;
 }
 
 .tipos-comercio p {
@@ -141,7 +141,7 @@ body {
 }
 
 .comercios-lista-img::-webkit-scrollbar-thumb {
-  background: #f63c41;
+  background: #b32340;
   border-left: 4px solid #333e5b;
   border-top: 4px solid #333e5b;
   border-right: 4px solid #333e5b;
@@ -192,7 +192,7 @@ body {
   width: 20px;
   height: 10px;
   margin-right: 10px;
-  background: #f63c41;
+  background: #b32340;
 }
 
 .sobre-lista dd {
@@ -206,6 +206,10 @@ body {
   grid-column: 1/4;
   margin: auto;
   max-width: 600px;
+}
+
+.mapa img {
+  border: 5px solid #333e5b;
 }
 
 .dados {
@@ -223,7 +227,7 @@ body {
   width: 20px;
   height: 10px;
   margin-right: 10px;
-  background: #f63c41;
+  background: #b32340;
 }
 
 .rodape {
@@ -413,7 +417,7 @@ body {
 }
 
 .arrow-black {
-  background: url("../img/arrow-black.svg") no-repeat center center;
+  background: url("../img/arrow-red.svg") no-repeat center center;
   display: inline-block;
   width: 8px;
   height: 10px;
