@@ -5,3 +5,6 @@ Fix Issue with initial load where everything loads.
 Fix Issue where the text size glitch the loaded elem.
 Change words from portuguese to english (ie Ativo-Active).
 Animal-Store, Animals-Stores, Abrir Fechar
+Reduce Slide Needed Movement.
+Somethings are appering/hiding faster them needed (aka Contact)
+Submenu FAQ and Numbers Not Working on Mobile. (Remove data-dropdown from li)

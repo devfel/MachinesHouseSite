@@ -32,7 +32,7 @@ export default class AnimaScroll {
       if (window.pageYOffset > item.offset) {
         item.element.classList.add("ativo");
 
-        // Esle to hide objects again if the scroll goes up.
+        // Else to hide objects again if the scroll goes up.
       } else if (item.element.classList.contains("ativo")) {
         item.element.classList.remove("ativo");
       }

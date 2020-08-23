@@ -5,12 +5,6 @@
   grid-gap: 30px;
 }
 
-@media (max-width: 780px) {
-  .numbers-grid {
-    grid-column: 1;
-  }
-}
-
 .numbers-grid h3 {
   font-family: "Playfair Display SC";
   font-size: 2rem;
@@ -37,4 +31,14 @@
 
 [data-week].open::after {
   background: #3f4;
+}
+
+@media (max-width: 780px) {
+  .numbers-grid {
+    grid-column: 1 / -1;
+  }
+
+  .numbers-grid h3 {
+    font-size: 1.2rem;
+  }
 }
