@@ -27,7 +27,7 @@ html.fonte-maior {
 }
 
 body {
-  background: #faf6cf;
+  background: #dbd3bf;
   color: #222222;
 }
 
@@ -40,7 +40,7 @@ body {
   grid-column: 3 / 5;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
-  background: #ffc56e;
+  background: #333e5b;
 }
 
 .menu ul {
@@ -53,7 +53,7 @@ body {
   display: block;
   padding: 16px 10px;
   margin-right: 10px;
-  color: #222222;
+  color: #dbd3bf;
   text-decoration: none;
   font-family: monospace;
   font-weight: bold;
@@ -73,13 +73,23 @@ body {
   margin-bottom: 1rem;
 }
 
+.logo-title {
+  grid-column: 1 / 4;
+  display: flex;
+}
+
+.main-logo {
+  width: 250px;
+  margin-right: 10px;
+}
+
 .titulo {
   font-family: georgia;
   font-size: 4rem;
   line-height: 1;
   font-weight: 400;
   margin-bottom: 0rem;
-  grid-column: 1 / 4;
+  align-self: center;
 }
 
 .subtitulo {
@@ -97,7 +107,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 1rem;
-  color: #f63c41;
+  color: #333e5b;
 }
 
 .tipos-comercio h4::before {
@@ -106,7 +116,7 @@ body {
   width: 40px;
   height: 10px;
   margin-right: 10px;
-  background: #ffc56e;
+  background: #f63c41;
 }
 
 .tipos-comercio p {
@@ -131,15 +141,15 @@ body {
 }
 
 .comercios-lista-img::-webkit-scrollbar-thumb {
-  background: #ffc56e;
-  border-left: 4px solid #f63c41;
-  border-top: 4px solid #f63c41;
-  border-right: 4px solid #f63c41;
-  border-bottom: 4px solid #f63c41;
+  background: #f63c41;
+  border-left: 4px solid #333e5b;
+  border-top: 4px solid #333e5b;
+  border-right: 4px solid #333e5b;
+  border-bottom: 4px solid #333e5b;
 }
 
 .comercios-lista-img::-webkit-scrollbar-track {
-  background: #f63c41;
+  background: #333e5b;
 }
 
 .comercio-descricao {
@@ -172,7 +182,7 @@ body {
   font-weight: bold;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
-  color: #f63c41;
+  color: #333e5b;
   cursor: pointer;
 }
 
@@ -182,7 +192,7 @@ body {
   width: 20px;
   height: 10px;
   margin-right: 10px;
-  background: #ffc56e;
+  background: #f63c41;
 }
 
 .sobre-lista dd {
@@ -213,19 +223,20 @@ body {
   width: 20px;
   height: 10px;
   margin-right: 10px;
-  background: #ffc56e;
+  background: #f63c41;
 }
 
 .rodape {
   grid-column: 3/5;
   margin-bottom: 2rem;
-  background: #ffc56e;
+  background: #333e5b;
 }
 
 .rodape p {
   padding: 20px;
   font-family: monospace;
   font-weight: bold;
+  color: #dbd3bf;
 }
 
 @media (max-width: 780px) {
@@ -257,7 +268,7 @@ body {
     grid-column: 1 / 3;
   }
   .grid-section h1 {
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
   .menu {
     margin-top: 0px;
@@ -268,6 +279,17 @@ body {
   .subtitulo {
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
+    justify-self: center;
+  }
+  .logo-title {
+    display: grid;
+  }
+  .main-logo {
+    justify-self: center;
+    margin-right: 0px;
+  }
+  .titulo {
+    justify-self: center;
   }
 }
 
@@ -385,7 +407,7 @@ body {
 }
 
 .btc-preco {
-  background: #3f4;
+  background: #798190;
   padding: 0.2rem 0.5rem;
   border-radius: 10px;
 }

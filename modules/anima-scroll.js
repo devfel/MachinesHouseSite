@@ -10,9 +10,11 @@ import debounce from "./debounce.js";
 export default class AnimaScroll {
   constructor(sections) {
     this.sections = document.querySelectorAll(sections);
-    this.windowPerc = window.innerHeight * 0.8;
+    this.percent = 0.8;
+    this.windowPerc = window.innerHeight * this.percent;
 
     this.checkDistance = debounce(this.checkDistance.bind(this), 25);
+    this.onResize = debounce(this.onResize.bind(this), 100);
   }
 
   // Find the distance of the object to the top of the site
@@ -39,11 +41,29 @@ export default class AnimaScroll {
     });
   }
 
+  // Reload configuration if the screen is resized by the user.
+  onResize() {
+    setTimeout(() => {
+      this.windowPerc = window.innerHeight * this.percent;
+      this.getDistance();
+      this.checkDistance();
+    }, 1000);
+  }
+
   init() {
     if (this.sections.length) {
       this.getDistance();
       this.checkDistance();
       window.addEventListener("scroll", this.checkDistance);
+
+      // Fixes to reload page when click-touch an Image or Resize the page;
+      document
+        .querySelector(".comercios-lista-img")
+        .addEventListener("click", this.onResize);
+      document
+        .querySelector(".comercios-lista-img")
+        .addEventListener("touchstart", this.onResize);
+      window.addEventListener("resize", this.onResize);
     }
     return this;
   }

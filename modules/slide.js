@@ -72,16 +72,18 @@ export class Slide {
 
   // Moves the picture so there is always something on center
   changeSlideOnEnd() {
-    // Check if the movement is more than half of image width (positive).
+    const distNeededToMove =
+      this.slide.children[this.index.current].children[0].width / 4;
+    // Check if the movement is more than needed to move (positive).
     if (
-      this.dist.movement > this.slide.children[0].children[0].width / 2 &&
+      this.dist.movement > distNeededToMove &&
       this.index.next !== undefined
     ) {
       this.activeNextSlide(); // Go to next slide
     }
-    // Check if the movement is more than half of image width (negative).
+    // Check if the movement is more than needed to move (negative).
     else if (
-      this.dist.movement < -this.slide.children[0].children[0].width / 2 &&
+      this.dist.movement < -distNeededToMove &&
       this.index.prev !== undefined
     ) {
       this.activePrevSlide(); // Go to previous slide

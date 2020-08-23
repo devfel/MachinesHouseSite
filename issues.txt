@@ -1,10 +1,15 @@
-Change Colors.
-Set up text and grid so the text go bellow image. 
-Fix Issue with resizing small -> large.
-Fix Issue with initial load where everything loads.
-Fix Issue where the text size glitch the loaded elem.
-Change words from portuguese to english (ie Ativo-Active).
+To do:
+- Set up text and grid so the text go also bellow the image. 
+
+- Change words from portuguese to english (ie Ativo-Active).
 Animal-Store, Animals-Stores, Abrir Fechar
+
+
+Done: 
 Reduce Slide Needed Movement.
-Somethings are appering/hiding faster them needed (aka Contact)
 Submenu FAQ and Numbers Not Working on Mobile. (Remove data-dropdown from li)
+Somethings are appering/hiding faster them needed (aka Contact)
+Fix Issue where the text size glitch the loaded elem.
+Fix Issue with initial load where everything loads.
+Fix Issue with resizing small -> large.
+Utilize logo ./img/casa-das-maquinas-shine-logo.png
