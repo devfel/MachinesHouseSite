@@ -1,9 +1,8 @@
 To do:
 - Set up text and grid so the text go also bellow the image. 
-
 - Change words from portuguese to english (ie Ativo-Active).
 Animal-Store, Animals-Stores, Abrir Fechar
-
+- Web Faveicon not optimal, create one.
 
 Done: 
 Reduce Slide Needed Movement.
@@ -13,3 +12,7 @@ Fix Issue where the text size glitch the loaded elem.
 Fix Issue with initial load where everything loads.
 Fix Issue with resizing small -> large.
 Utilize logo ./img/casa-das-maquinas-shine-logo.png
+Add map border
+Change login arrow color
+Change red-color: from #f63c41 to #b32340
+Add favicon.
