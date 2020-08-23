@@ -344,12 +344,19 @@ body {
 }
 
 [data-animate="accordion"] dt:after {
-  content: "↪";
+  content: "";
   margin-left: 10px;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: url("../img/arrow-red.svg") no-repeat center center;
+  transform: rotate(90deg);
+  transition: transform 0.3s;
 }
 
 [data-animate="accordion"] dt.active:after {
-  content: "↩";
+  content: "";
+  transform: rotate(-90deg);
 }
 
 [data-animate="accordion"] dd.active {
@@ -381,4 +388,11 @@ body {
   background: #3f4;
   padding: 0.2rem 0.5rem;
   border-radius: 10px;
+}
+
+.arrow-black {
+  background: url("../img/arrow-black.svg") no-repeat center center;
+  display: inline-block;
+  width: 8px;
+  height: 10px;
 }
