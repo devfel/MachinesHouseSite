@@ -19,7 +19,7 @@
 <b>Responsive</b> WebSite done for a business that sells machines, equipment and parts for comercial stores. This project was made from a blank screen with lots of vanilla Javascript ES6+, HTML and CSS without the use of any libraries or frameworks.
 </p>
   <p align="center">
-  <a href="https://devfel.github.io/machines-house/" rel="noopener">
+  <a target="_blank" href="https://devfel.github.io/machines-house/" rel="noopener">
  <img  width="600px" src="./img/machines-house.gif" alt="Machines House"></a>
 </p>
 
